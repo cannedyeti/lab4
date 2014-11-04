@@ -46,6 +46,26 @@ describe("Functional", function() {
   // function argument.
   // TODO: write a test for the custom method you wrote
   // in exercises/functional.js
-  it("should test the exercise you wrote yourself");
+  it("should test the exercise you wrote yourself", function() {
+    var bonds = [
+    {name: "Sean Connery", start: 1962, movies: 7},
+    {name: "David Niven", start: 1967, movies: 1},
+    {name: "George Lazenby", start: 1969, movies: 1},
+    {name: "Roger Moore", start: 1973, movies: 7},
+    {name: "Timothy Dalton", start: 1987, movies: 2},
+    {name: "Pierce Brosnan", start: 1995, movies: 4},
+    {name: "Daniel Craig", start: 2006, movies: 3}]
+    result = functional.findBondActors(bonds);
+
+    answer = [
+    {bondName: "Sean Connery", moviesPlayed: 7},
+    {bondName: "Roger Moore", moviesPlayed: 7},
+    {bondName: "Pierce Brosnan", moviesPlayed: 4},
+    {bondName: "Daniel Craig", moviesPlayed: 3} 
+    ]
+
+    expect(result).to.eql(answer);
+
+  });
 
 });
